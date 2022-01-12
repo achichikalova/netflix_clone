@@ -1,55 +1,64 @@
-.login {
+.loginScreen {
   position: relative;
   height: 85vh;
   color: white;
   object-fit: contain;
   padding: 70px 45px;
+  border-bottom: 8px solid #222;
 }
 
-.login-contents {
+.loginScreen-contents {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  text-align: center;
   margin: 0 auto;
   max-width: 950px;
+  height: 60vh;
+  z-index: 10;
+  color: white;
+  padding: 20px;
 }
 
-.login-title {
+.loginScreen-title {
   font-size: 3.125rem;
-  margin: 16px 155px;
+  margin: 0 auto;
+  max-width: 640px;
 }
 
-.login-subtitle {
+.loginScreen-subtitle {
   font-size: 1.625rem;
   font-weight: 400;
+  margin: 1rem auto;
 }
 
 .email-title {
   font-size: 1.2rem;
   font-weight: 400;
+  padding: 20px;
 }
 
 .email-form {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 5%;
 }
 
 .email-form input {
-  width: 300px;
-  height: 45px;
+  width: 35vw;
+  max-width: 500px;
+  height: 50px;
   padding: 0 15px;
   border: solid 1px #8c8c8c;
 }
 
 .email-form button {
-  height: 45px;
+  height: 50px;
   width: 150px;
-  border: 0;
-  padding: 0 10px;
-  background-color: #fc0a0a;
+  border: none;
+  background-color: #e50914;
   color: white;
   font-size: 1.35rem;
   padding: 0.5rem 0;

@@ -1,13 +1,11 @@
-import Banner from './Banner';
-import Nav from './Nav';
+import Banner from '../Banner';
 import Row from '../Row';
 import './HomeScreen.css';
 import requests from '../../Requests';
 
 const HomeScreen = () => {
   return (
-    <div className='home-screen'>
-      <Nav />
+    <div className='home-screen'>     
 
       <Banner />
 
