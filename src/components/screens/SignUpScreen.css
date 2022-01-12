@@ -1,0 +1,41 @@
+.signUp-screen {
+  display: flex;
+  max-width: 300px;
+  padding: 70px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, .75);
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.signUp-screen form {
+  width: 100%;
+}
+.signUp-screen h1 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.signUp-screen input {
+  width: 265px;
+  border-radius: 4px;
+  border: 0;
+  padding: 16px;
+  margin: 0 0 1rem 0;
+  outline: none;
+  font-size: 1rem;
+}
+
+.signUp-screen button {
+  font-weight: 700;
+  margin: 24px 0 12px;
+  border-radius: 4px;
+  width: 100%;
+  background: #e50914;
+  border: none;
+  padding: 16px;
+  color: white;
+  font-size: 1rem;
+}
