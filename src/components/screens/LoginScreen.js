@@ -1,6 +1,11 @@
+import { useState } from 'react';
 import './LoginScreen.css';
+import SignUpScreen from './SignUpScreen';
 
-const Login = () => {
+const LoginScreen = () => {
+
+  const [signUp, setSignUp] = useState(false);
+
   return (
     <header 
       className='loginScreen'
@@ -10,18 +15,22 @@ const Login = () => {
         backgroundPosition: "center center no-repeat"
       }}
     >
-      <div className="loginScreen-contents">
-        <h1 className='loginScreen-title'>Unlimited movies, TV shows, and more.</h1>
-        <h2 className='loginScreen-subtitle'>Watch anywhere. Cancel anytime.</h2>
-        <h3 className='email-title'>Ready to watch? Enter your email to create or restart your membership.</h3>
-        <form className='email-form'>
-          <input type="email" name="email" placeholder='Email address'/>
-          <button>Get Started &gt;</button>
-        </form>
-      </div>
+      {signUp ? (
+        <SignUpScreen />
+      ) : (
+        <div className="loginScreen-contents">
+          <h1 className='loginScreen-title'>Unlimited movies, TV shows, and more.</h1>
+          <h2 className='loginScreen-subtitle'>Watch anywhere. Cancel anytime.</h2>
+          <h3 className='email-title'>Ready to watch? Enter your email to create or restart your membership.</h3>
+          <form className='email-form'>
+            <input type="email" name="email" placeholder='Email address'/>
+            <button onClick={() => setSignUp(true)}>Get Started &gt;</button>
+          </form>
+        </div>
+      )}
       <div className="loginScreen--gradient"></div>
     </header>
   )
 }
 
-export default Login;
+export default LoginScreen;
