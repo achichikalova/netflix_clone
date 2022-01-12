@@ -1,7 +1,6 @@
 import './Nav.css';
 
-const Nav = () => {
-  const user = '';
+const Nav = ({user}) => {
   
   return (
     <div className='nav'>
