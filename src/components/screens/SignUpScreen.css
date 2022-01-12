@@ -1,5 +1,4 @@
 .signUp-screen {
-  display: flex;
   max-width: 300px;
   padding: 70px;
   margin: 0 auto;
@@ -38,4 +37,16 @@
   padding: 16px;
   color: white;
   font-size: 1rem;
+}
+
+.signUp-screen .link {
+  color: #737373;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.signUp-screen .link a {
+  color: white;
+  text-decoration: none;
 }
