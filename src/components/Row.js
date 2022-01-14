@@ -16,7 +16,6 @@ const Row = ({ title, fetchUrl, isLargeRow=false }) => {
 
     fetchData();
   }, [fetchUrl]);
-  console.log(movies)
 
   const moviePoster = movies.map(movie => {
     return <img
