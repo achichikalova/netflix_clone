@@ -30,10 +30,6 @@ const SignUpScreen = () => {
     }
   }
 
-  const logout = async (e) => {
-    e.preventDefault();
-  }
-
   return (
     <div className='signUp-screen'>
       <form>
