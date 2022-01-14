@@ -49,7 +49,7 @@
 
 .btn--red {
   background: #e50914;
-  border-color: #e50914;
+  border: none;
 }
 
 .user-avatar {
