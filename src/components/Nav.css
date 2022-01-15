@@ -54,5 +54,6 @@
 
 .user-avatar {
   width: 50px;
-  margin-right: 3rem;  
+  margin-right: 3rem;
+  cursor: pointer;
 }
