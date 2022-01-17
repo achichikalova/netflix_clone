@@ -4,15 +4,18 @@ const plans =
   [
     {
       name: 'Premium',
-      desc: '4K + HDR'
+      desc: '4K + HDR',
+      id: 1
     },
     {
       name: 'Basic',
-      desc: '720p'
+      desc: '720p',
+      id: 2
     },
     {
       name: 'Standard',
-      desc: '1080p'   
+      desc: '1080p',
+      id: 3
     }
   ]
 
@@ -22,7 +25,7 @@ const PlanList = () => {
   const planList = plans.map(plan => {
     return (
       <div className='planList'>
-        <div className='planList-info'>
+        <div className='planList-info' key={plan.id}>
           <div>{plan.desc}</div>
           <div>{plan.name}</div>
         </div>
