@@ -8,6 +8,7 @@ import Nav from './components/Nav';
 import { auth } from './firebase';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice';
+import ErrorScreen from './components/screens/ErrorScreen';
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
       <Routes>
         <Route exact path="/profile" element={<ProfileScreen />}/>
         <Route exact path="/" element={<HomeScreen />}/>
+        <Route path="*" element={<ErrorScreen />} />
       </Routes>
       }
     </Router>
