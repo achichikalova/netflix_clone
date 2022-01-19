@@ -38,17 +38,17 @@ const Row = ({ title, fetchUrl, isLargeRow=false }) => {
       let scrollLeft;
       slider.addEventListener('mousedown', async (e) => {
         isDown = true;
-        slider.classList.add('active');
+        slider.classList.add('row-posters--active');
         startX = e.pageX - slider.offsetLeft;
         scrollLeft = slider.scrollLeft;
       });
       slider.addEventListener('mouseleave', async () => {
         isDown = false;
-        slider.classList.remove('active');
+        slider.classList.remove('row-posters--active');
       });
       slider.addEventListener('mouseup', async () => {
         isDown = false;
-        slider.classList.remove('active');
+        slider.classList.remove('row-posters--active');
       });
       slider.addEventListener('mousemove', async (e) => {
         if(!isDown) return;
