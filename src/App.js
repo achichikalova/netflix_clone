@@ -35,8 +35,11 @@ function App() {
   return (
     <Router>
       <Nav user={user} />
-      {!user ? (
-        <LoginScreen />
+      {!user ? (        
+        <Routes>
+          <Route exact path="/" element={<LoginScreen />}/>
+          <Route path="*" element={<ErrorScreen />} />
+        </Routes>
       ) : 
       <Routes>
         <Route exact path="/profile" element={<ProfileScreen />}/>
