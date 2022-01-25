@@ -36,6 +36,7 @@ const Row = ({ title, fetchUrl, isLargeRow=false }) => {
       let isDown = false;
       let startX;
       let scrollLeft;
+      
       slider.addEventListener('mousedown', async (e) => {
         isDown = true;
         slider.classList.add('row-posters--active');
@@ -54,9 +55,7 @@ const Row = ({ title, fetchUrl, isLargeRow=false }) => {
         if(!isDown) return;
         e.preventDefault();
         const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 3; 
-        //scroll-fast
-        slider.scrollLeft = scrollLeft - walk;
+        const walk = (x - startX) * 3;
       });
     }
 
