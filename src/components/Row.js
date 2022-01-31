@@ -55,7 +55,9 @@ const Row = ({ title, fetchUrl, isLargeRow=false }) => {
         if(!isDown) return;
         e.preventDefault();
         const x = e.pageX - slider.offsetLeft;
+        //scroll-fast
         const walk = (x - startX) * 3;
+        slider.scrollLeft = scrollLeft - walk;
       });
     }
 
