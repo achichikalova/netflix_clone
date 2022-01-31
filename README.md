@@ -1,4 +1,7 @@
 # Demo: [Netflix Clone](https://netflix-clone-4e8a2.web.app/)
+You can register or use test credentials: <br>
+<b>user email:</b> test@test.test <br>
+<b>password:</b> 123456
 <br>
 
 # Description
