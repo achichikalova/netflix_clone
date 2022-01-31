@@ -3,6 +3,7 @@
   height: 448px;
   color: white;
   object-fit: contain;
+  margin-bottom: 2.8rem;
 }
 
 .banner-contents {
@@ -12,11 +13,9 @@
 }
 
 .banner-description {
-  width: 45rem;
   line-height: 1.3;
   padding-top: 1rem;
   font-size: .8rem;
-  min-width: 360px;
   height: 80px;
 }
 
