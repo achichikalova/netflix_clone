@@ -52,6 +52,14 @@
   border: none;
 }
 
+.nav-content-data {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .user-avatar {
   width: 50px;
   margin-right: 3rem;

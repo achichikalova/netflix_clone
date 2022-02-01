@@ -1,0 +1,117 @@
+.search-icon {
+  box-sizing: border-box;
+  width: 1rem;
+  height: 2rem;
+  max-width: 20em;
+  transition: all .7s linear;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  margin-right: 40px;
+  border: none;  
+  padding: .25rem;
+  border-color: white;
+}
+
+.search-icon-wrapper {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 5px;
+  transform: rotate(-45deg);
+  transition: all 0 linear;  
+}
+
+.search-icon-wrapper:hover {
+  cursor: pointer;
+}
+
+.search-icon-input {
+  background: none;
+  text-align: center;
+  outline: none;
+  display: block;
+  border: none;
+  width: calc(100% - (1rem / 2 + 1rem));
+  margin-right: 5rem;
+  height: 100%;
+  transition: all .7s linear;
+  font-size: 1em;
+  padding: 0 .5em;
+  color: white;
+}
+
+.search-icon-input::placeholder {
+  color: white;
+}
+
+.search-icon-glass {
+  width: 59%;
+  height: 59%;
+  border: solid .25rem;
+  border-color: white;
+  border-radius: 100px;
+  margin: 0 auto;
+  position: relative;
+  transition: all .7s cubic-bezier(.77, 1.55, .77, 1.13), border-color 0s linear .7s;
+  transition-delay: .7s;
+}
+
+.search-icon-handle {
+  height: calc(100% - 39%);
+  width: .25rem;
+  margin: 0 auto;
+  background: white;
+  position: absolute;
+  border-radius: 0 0 100px 100px;
+  left: 0;
+  right: 0;
+  transition: all .7s cubic-bezier(.77, 1.55, .77, 1.13);
+  transition-delay: .7s;
+}
+
+.search-icon-handle::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: .75rem;
+  border-radius: inherit;
+  background: white;
+  transform: rotate(0deg);
+  transition: all .7s linear;
+  transition-delay: 0s;
+}
+
+.search-icon.open {
+  width: calc(100vw - 1rem);
+  border-color: white;
+  border: solid white 1px;
+  transition-delay: .35s;
+}
+
+.search-icon.open .search-icon-input {
+  transition-delay: .35s;
+}
+
+.search-icon.open .search-icon-glass {
+  display: none;
+}
+
+.search-icon.open .search-icon-handle {
+  bottom: calc(50% - (100% - 29%) / 2);
+  transition-delay: .35s;
+  height: .75rem;
+}
+
+.search-icon.open .search-icon-handle::after {
+  transform: rotate(90deg);
+  transition-delay: 0s;
+}
