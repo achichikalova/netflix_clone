@@ -8,9 +8,7 @@ const SearchBar = () => {
     searchIcon.addEventListener('click', e => {
       searchIcon.parentElement.classList.toggle('open')
     })
-  }, [])
-
-
+  }, []);
 
   return (
     <div className='search-icon'>
