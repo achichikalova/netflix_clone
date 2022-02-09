@@ -20,8 +20,7 @@ const Row = ({ title, fetchUrl, isLargeRow=false, searchTerm, setSearchTerm }) =
 
   // Get movie element
   const moviePoster = movies.filter(movie => {
-    // console.log(movie)
-    if (searchTerm == '') {
+    if (searchTerm === '') {
       return movie;
     } else if ((movie?.title || movie?.name || movie?.original_name).toLowerCase().includes(searchTerm.toLowerCase())) {
       return movie;
