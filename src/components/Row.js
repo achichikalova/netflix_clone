@@ -2,7 +2,7 @@ import axios from "../axios";
 import { useEffect, useState } from "react";
 import "./Row.css";
 
-const Row = ({ title, fetchUrl, isLargeRow=false }) => {
+const Row = ({ title, fetchUrl, isLargeRow=false, searchTerm, setSearchTerm }) => {
   const [movies, setMovies] = useState([]);
 
   const base_url = "https://image.tmdb.org/t/p/original";
@@ -19,7 +19,14 @@ const Row = ({ title, fetchUrl, isLargeRow=false }) => {
   }, [fetchUrl]);
 
   // Get movie element
-  const moviePoster = movies.map(movie => {
+  const moviePoster = movies.filter(movie => {
+    // console.log(movie)
+    if (searchTerm == '') {
+      return movie;
+    } else if ((movie?.title || movie?.name || movie?.original_name).toLowerCase().includes(searchTerm.toLowerCase())) {
+      return movie;
+    }
+  }).map(movie => {
     return <img
       className={`row-poster ${isLargeRow && "row-poster--large"}`}
       key={movie.id}

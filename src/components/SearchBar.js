@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './SearchBar.css';
 
-const SearchBar = () => {
+const SearchBar = ({ searchTerm, setSearchTerm }) => {
 
   useEffect(() => {
     const searchIcon = document.querySelector('.search-icon-wrapper');
@@ -12,7 +12,11 @@ const SearchBar = () => {
 
   return (
     <div className='search-icon'>
-      <input className='search-icon-input' type="text" placeholder='Title, genres, people'/>
+      <input 
+        className='search-icon-input'
+        type="text"
+        onChange={e => {setSearchTerm(e.target.value)}}
+        placeholder='Title, genres, people'/>
       <div className="search-icon-wrapper">
         <div className="search-icon-glass"></div>
         <div className="search-icon-handle"></div>

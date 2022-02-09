@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import './Nav.css';
 import SearchBar from './SearchBar';
 
-const Nav = ({ user }) => {
+const Nav = ({ user, searchTerm, setSearchTerm }) => {
 
   const navigate = useNavigate();
   
@@ -17,7 +17,7 @@ const Nav = ({ user }) => {
           </div>
         ) :
           <div className='nav-content-data'>
-            <SearchBar />
+            <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
             <img onClick={() => {navigate('/profile')}} className='user-avatar' src="./images/user.png" alt="" />
           </div>
         }
