@@ -15,6 +15,7 @@ function App() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
+  // Search Bar Term
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
