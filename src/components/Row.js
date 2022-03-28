@@ -31,7 +31,8 @@ const Row = ({ title, fetchUrl, isLargeRow=false, searchTerm, setSearchTerm }) =
       key={movie.id}
       src={`${base_url}${
       isLargeRow ? movie.poster_path : movie.backdrop_path}`}
-      alt={movie.name} />
+      alt={movie.name}
+      title={movie?.title || movie?.name || movie?.original_name} />
   });
 
   // Drag and swipe
