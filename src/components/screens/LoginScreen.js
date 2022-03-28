@@ -1,10 +1,7 @@
-import { useState } from 'react';
 import './LoginScreen.css';
 import SignUpScreen from './SignUpScreen';
 
-const LoginScreen = () => {
-
-  const [signUp, setSignUp] = useState(false);
+const LoginScreen = ({ signUp, setSignUp }) => {  
 
   return (
     <header 

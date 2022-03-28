@@ -12,6 +12,8 @@ import ErrorScreen from './components/screens/ErrorScreen';
 
 function App() {
 
+  const [signUp, setSignUp] = useState(false);
+
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
@@ -37,10 +39,10 @@ function App() {
 
   return (
     <Router>
-      <Nav user={user} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <Nav user={user} searchTerm={searchTerm} setSearchTerm={setSearchTerm} signUp={signUp} setSignUp={setSignUp} />
       {!user ? (        
         <Routes>
-          <Route exact path="/" element={<LoginScreen />}/>
+          <Route exact path="/" element={<LoginScreen signUp={signUp} setSignUp={setSignUp} />}/>
           <Route path="*" element={<ErrorScreen />} />
         </Routes>
       ) : 

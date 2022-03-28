@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import './Nav.css';
 import SearchBar from './SearchBar';
 
-const Nav = ({ user, searchTerm, setSearchTerm }) => {
+const Nav = ({ user, searchTerm, setSearchTerm, signUp, setSignUp }) => {
 
   const navigate = useNavigate();
   
@@ -13,12 +13,12 @@ const Nav = ({ user, searchTerm, setSearchTerm }) => {
         {!user ? (
           <div className="nav-btn">
             <button className='btn'>English</button>
-            <button className='btn btn--red'>Sign In</button>
+            <button className='btn btn--red' onClick={() => setSignUp(true)}>Sign In</button>
           </div>
         ) :
           <div className='nav-content-data'>
             <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
-            <img onClick={() => {navigate('/profile')}} className='user-avatar' src="./images/user.png" alt="" />
+            <img onClick={() => navigate('/profile')} className='user-avatar' src="./images/user.png" alt="" />
           </div>
         }
       </div>
